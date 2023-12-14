@@ -19,11 +19,8 @@ function mondayWork(activity){
 
     }
 }
-function wrapAdjective(wrapper){
-    const adj = function(adjString){
-        return "You are "+wrapper+adjString+wrapper+"!";
-
+function wrapAdjective(wrapper="*"){
+    return function(adjective="a hard worker"){
+        return `You are ${wrapper}${adjective}${wrapper}!`
     }
-    return adj;
-    
 }
